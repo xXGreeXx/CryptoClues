@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartScreenTextHandler : MonoBehaviour {
 
@@ -42,5 +43,8 @@ public class StartScreenTextHandler : MonoBehaviour {
         yield return new WaitForSeconds(2);
 
         text.GetComponent<UnityEngine.UI.Text>().text += "All systems ready \n";
+
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("Game");
     }
 }
