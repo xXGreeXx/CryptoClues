@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HighlightGameobjectScript : MonoBehaviour {
     Color startColor = Color.white;
+    bool showNote = false;
 
     void OnMouseEnter()
     {
