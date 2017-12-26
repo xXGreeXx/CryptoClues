@@ -20,11 +20,12 @@ public class MainGameHandler : MonoBehaviour {
     //start new level
     public void StartNewLevel()
     {
-       // noteBlank.GetComponent<UnityEngine.UI.Text>().text = levels.levels[0].clue;
+       noteBlank.transform.Find("noteText").gameObject.GetComponent<UnityEngine.UI.InputField>().text = levels.levels[0].clue;
     }
 
 	//update
 	void Update () {
-		
-	}
+	
+        if (Input.GetKeyDown(KeyCode.Escape)) noteBlank.SetActive(false);
+    }
 }
